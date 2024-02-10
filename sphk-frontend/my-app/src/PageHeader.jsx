@@ -43,7 +43,7 @@ function PageHeader() {
                 <button onClick={() => filterGames('all')} >All</button>
                 <button onClick={() => filterGames('soccer')}>Soccer</button>
                 <button onClick={() => filterGames('basketball')}>Basketball</button>
-                <   button onClick={() => filterGames('ping-pong')}>Ping Pong</button>
+                <button onClick={() => filterGames('ping-pong')}>Ping Pong</button>
                 <button onClick={() => filterGames('volleyball')}>Volleyball</button>
                 <button onClick={() => filterGames('tennis')}>Tennis</button>
             </nav>
