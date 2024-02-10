@@ -1,9 +1,11 @@
 import './App.css';
-import MainPage from './MainPage.jsx';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import MainPage from './MainPage.jsx';
 import JoinGamePage from './JoinGamePage';
 import GamePage from './GamePage';
 import FriendsPage from './FriendsPage';
+import Login from './Login';
+import SignUp from './SignUp';
 
 function App() {
 
@@ -17,7 +19,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<MainPage upcomingGames={upcomingGames} recentGames={recentGames} sport='All'/>} />
+        <Route path="/" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/all" element={<MainPage upcomingGames={upcomingGames} recentGames={recentGames} sport='All'/>} />
         <Route path="/soccer" element={<MainPage upcomingGames={upcomingGames} recentGames={recentGames} sport='Soccer'/>} />
         <Route path="/basketball" element={<MainPage upcomingGames={upcomingGames} recentGames={recentGames} sport='Basketball'/>} />
         <Route path="/ping-pong" element={<MainPage upcomingGames={upcomingGames} recentGames={recentGames} sport='Ping Pong'/>} />
@@ -29,6 +33,6 @@ function App() {
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;
