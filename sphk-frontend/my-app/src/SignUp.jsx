@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './SignUp.css';
+import { useNavigate } from 'react-router-dom';
 import BackgroundImage from './Login-Background.jpg';
 
 const SignUp = () => {
@@ -11,7 +12,7 @@ const SignUp = () => {
         age: '',
         skillLevel: ''
     });
-
+    const navigate = useNavigate();
     const [errors, setErrors] = useState({
         firstName: '',
         lastName: '',
@@ -50,9 +51,10 @@ const SignUp = () => {
 
         setErrors(newErrors);
 
-        if (Object.keys(newErrors).length === 0) {
-            console.log("Sign Up Data:", signupData);
+        if(Object.keys(newErrors).length === 0){
+            navigate('/all');
         }
+        
     };
 
     return (

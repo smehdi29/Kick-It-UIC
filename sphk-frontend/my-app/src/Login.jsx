@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import './Login.css';
 import BackgroundImage from './Login-Background.jpg';
@@ -6,9 +7,16 @@ import Logo from './Logo_clear.png';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({
-        username: '',
+        email: '',
         password: ''
     });
+
+    const [errors, setErrors] = useState({
+        email: '',
+        password: ''
+    });
+
+    const navigate = useNavigate();
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -18,16 +26,26 @@ const Login = () => {
         }));
     };
 
+    const valid = () => {
+        const requiredFields = ['email', 'password'];
+        const newErrors = {};
+
+        setErrors(newErrors);
+
+        if(Object.keys(newErrors).length === 0){
+            navigate('/all');
+        }
+        navigate('/all');
+    }
+
+
     return (
         <div className="login-container" style={{ backgroundImage: `url(${BackgroundImage})` }}>
-
             <div className="content-container">
-                {}
                 <div className="leftSideOfLogin">
                     <h1 className="kick-it-text">Kick it!</h1>
                     <img src={Logo} alt="Logo" className="logo" />
                 </div>
-                {}
                 <div className="login-box-container">
                     <div className="login-box">
                         <form>
@@ -45,7 +63,7 @@ const Login = () => {
                             </div>
                         </form>
                         <div className="login-button">
-                            <button type="button">Login</button>
+                            <button type="button" onClick={valid}>Login</button>
                         </div>
                         <div className="signup-link">
                             <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>

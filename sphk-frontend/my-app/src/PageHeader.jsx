@@ -9,7 +9,7 @@ function PageHeader() {
     const navigate = useNavigate();
 
     const goHome = () => {
-        navigate('/');
+        navigate('/all');
     }
 
     const goGames = () => {
@@ -17,10 +17,7 @@ function PageHeader() {
     }
 
     const filterGames = (sport) => {
-        if(sport === 'all'){
-            navigate('/');
-        }
-        else{navigate('/'+sport);}
+        navigate('/'+sport);
     }
 
     const goFriends = () => {
@@ -36,7 +33,7 @@ function PageHeader() {
                         <h1 className="logo">Kick It!</h1>
                     </div>
                     <div className="navbar-links">
-                        <button className="nav-button">Contact Us</button>
+                        <button className="nav-button">About Us</button>
                         <button className="nav-button" onClick={goFriends}>Friends</button>
                         <button className="nav-button" onClick={goGames}>Games</button>
                     </div>

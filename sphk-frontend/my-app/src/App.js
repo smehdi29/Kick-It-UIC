@@ -14,8 +14,6 @@ function App() {
     {sport: 'Soccer', time: '9pm', date: '02-16-24', teamSize: '4', name: 'ezdubs3.0', location: "REC 250"}
   ];
   const recentGames = [{sport: 'Soccer', time: '10pm', date: '02-05-24', teamSize: '9', name: 'homies', location: "SES 250"}, {sport: 'Soccer', time: '10pm', date: '02-02-24', teamSize: '9', name: 'homies0.5', location: "SES 250"}];
-
-
   return (
     <Router>
       <Routes>

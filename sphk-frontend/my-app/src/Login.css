@@ -1,22 +1,22 @@
-* {
+.login-container * {
     font-family: 'Comfortaa', sans-serif;
 }
 
-body, h1, p {
+.login-container body, .login-container h1, .login-container p {
     margin: 0;
     padding: 0;
 }
 
-body {
+.login-container body {
     background-color: #f0f0f0;
     position: relative;
 }
 
-* {
+.login-container * {
     box-sizing: border-box;
 }
 
-.logo {
+.leftSideOfLogin .logo {
     width: 15em;
     height: 15em;
     margin-left: 130px;
@@ -29,12 +29,14 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
 }
 
 .content-container {
     flex: 1;
     display: flex;
+    gap: -30px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -44,7 +46,8 @@ body {
     display: flex;
     flex-flow: nowrap column;
     gap: 30px;
-    padding-left: 100px;
+    padding-left: 200px;
+    margin-left: 50px;
     justify-content: center;
 }
 
