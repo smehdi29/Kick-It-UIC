@@ -37,7 +37,7 @@ function GamePage({ upcomingGames, recentGames }){
             <PageHeader />
             <div className="gamePageContainer">
                 <h1>{name}</h1>
-                <img src={locImg} className="locImg" alt="location image"/>
+                <img src={locImg} className="locImg" alt="location"/>
                 <div className="gameDetails">
                     <p><strong>Sport: </strong> {sport}</p>
                     <p><strong>Date:</strong> {date}</p>
