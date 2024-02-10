@@ -17,7 +17,7 @@ function GamePage({ upcomingGames, recentGames, users }){
 
     let { gameName } = useParams();
     const nonurlGameName = decodeURIComponent(gameName);
-    let currGame = upcomingGames.find(game => game.name === nonurlGameName) || recentGames.find(game => game.name === nonurlGameName);
+    let currGame = upcomingGames.find(game => game.title === nonurlGameName) || recentGames.find(game => game.title === nonurlGameName);
     if(!currGame){
         return (
             <div className = "gamePage">
