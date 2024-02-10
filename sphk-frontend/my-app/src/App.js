@@ -6,6 +6,8 @@ import GamePage from './GamePage';
 import FriendsPage from './FriendsPage';
 import Login from './Login';
 import SignUp from './SignUp';
+import CreateSesh from './CreateSesh';
+
 
 function App() {
 
@@ -29,6 +31,7 @@ function App() {
         <Route path="/join-game" element={<JoinGamePage upcomingGames={upcomingGames} />} />
         <Route path="/game/:gameName" element={<GamePage upcomingGames={upcomingGames} recentGames={recentGames} users={users}/>} />
         <Route path="/friends" element={<FriendsPage /> } />
+        <Route path="/createSesh" element={<CreateSesh users={users} />} />
       </Routes>
     </Router>
   );

@@ -15,6 +15,10 @@ function MainPage({upcomingGames, recentGames, sport}) {
         let path = '/game/' + game.name;
         navigate(path);
     }
+    
+    const goToCreateSesh = () => {
+        navigate('/createSesh');
+    }
 
     const joinGame = () => {
         navigate('/join-game');
@@ -84,7 +88,7 @@ function MainPage({upcomingGames, recentGames, sport}) {
                     <div className="calendarContainer">
                         <div className="calendarHeader">
                             <h2>Game Calendar</h2>
-                            <button className="addGameButton">+Add Game</button>
+                            <button className="addGameButton" onClick={goToCreateSesh}>+Add Game</button>
                         </div>
                         <Calendar upcomingGames={upcomingGames} recentGames={recentGames} />
                     </div>
