@@ -2,6 +2,10 @@ import React from 'react';
 import './GamePage.css';
 import { useParams } from 'react-router-dom';
 import PageHeader from './PageHeader';
+import Arc from './arc.jpg';
+import Rec from './rec.jpg';
+import Ses from './ses.jpg';
+
 
 function GamePage({ upcomingGames, recentGames }){
 
@@ -16,13 +20,24 @@ function GamePage({ upcomingGames, recentGames }){
             </div>
         );
     }
+
+
     const { name, sport, date, time, teamSize, location } = currGame;
 
+    let locImg = Arc;
+    if(currGame.location.toLowerCase().includes('arc')){
+        locImg = Arc;
+    } else if(currGame.location.toLowerCase().includes('rec')){
+        locImg = Rec;
+    } else if(currGame.location.toLowerCase().includes('ses')){
+        locImg = Ses;
+    }
     return(
         <div className="gamePage">
             <PageHeader />
             <div className="gamePageContainer">
                 <h1>{name}</h1>
+                <img src={locImg} className="locImg" alt="location image"/>
                 <div className="gameDetails">
                     <p><strong>Sport: </strong> {sport}</p>
                     <p><strong>Date:</strong> {date}</p>

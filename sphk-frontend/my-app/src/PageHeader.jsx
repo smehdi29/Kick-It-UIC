@@ -23,6 +23,9 @@ function PageHeader() {
         else{navigate('/'+sport);}
     }
 
+    const goFriends = () => {
+        navigate('/friends');
+    }
 
     return (
         <div>
@@ -34,7 +37,7 @@ function PageHeader() {
                     </div>
                     <div className="navbar-links">
                         <button className="nav-button">Contact Us</button>
-                        <button className="nav-button" >Friends</button>
+                        <button className="nav-button" onClick={goFriends}>Friends</button>
                         <button className="nav-button" onClick={goGames}>Games</button>
                     </div>
                 </div>
@@ -43,7 +46,7 @@ function PageHeader() {
                 <button onClick={() => filterGames('all')} >All</button>
                 <button onClick={() => filterGames('soccer')}>Soccer</button>
                 <button onClick={() => filterGames('basketball')}>Basketball</button>
-                <button onClick={() => filterGames('ping-pong')}>Ping Pong</button>
+                <   button onClick={() => filterGames('ping-pong')}>Ping Pong</button>
                 <button onClick={() => filterGames('volleyball')}>Volleyball</button>
                 <button onClick={() => filterGames('tennis')}>Tennis</button>
             </nav>
