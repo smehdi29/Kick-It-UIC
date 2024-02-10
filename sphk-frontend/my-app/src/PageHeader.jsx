@@ -24,6 +24,9 @@ function PageHeader() {
         navigate('/friends');
     }
 
+    const goAbout = () => {
+        navigate('/aboutUs');
+    }
     return (
         <div>
             <header className="header"> 
@@ -33,7 +36,7 @@ function PageHeader() {
                         <h1 className="logo">Kick It!</h1>
                     </div>
                     <div className="navbar-links">
-                        <button className="nav-button">About Us</button>
+                        <button className="nav-button" onClick={goAbout}>About Us</button>
                         <button className="nav-button" onClick={goFriends}>Friends</button>
                         <button className="nav-button" onClick={goGames}>Games</button>
                     </div>

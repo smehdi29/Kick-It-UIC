@@ -5,6 +5,7 @@ import JoinGamePage from './JoinGamePage';
 import GamePage from './GamePage';
 import FriendsPage from './FriendsPage';
 import Login from './Login';
+import AboutPage from './AboutPage';
 import SignUp from './SignUp';
 import CreateSesh from './CreateSesh';
 
@@ -16,7 +17,7 @@ function App() {
     {sport: 'Soccer', time: '9pm', date: '02-16-24', teamSize: '4', name: 'ezdubs3.0', location: "REC 250"}
   ];
   const recentGames = [{sport: 'Soccer', time: '10pm', date: '02-05-24', teamSize: '9', name: 'homies', location: "SES 250"}, {sport: 'Soccer', time: '10pm', date: '02-02-24', teamSize: '9', name: 'homies0.5', location: "SES 250"}];
-  const users = [{profilePicture: '1', firstName: 'syed', lastName: 'shaban', age: '9', skillLevel: 'false'}];
+  const users = [{profilePicture: '1', firstName: 'syed', lastName: 'shaban', age: '17', skillLevel: 'false'}];
   return (
     <Router>
       <Routes>
@@ -32,6 +33,7 @@ function App() {
         <Route path="/game/:gameName" element={<GamePage upcomingGames={upcomingGames} recentGames={recentGames} users={users}/>} />
         <Route path="/friends" element={<FriendsPage /> } />
         <Route path="/createSesh" element={<CreateSesh users={users} />} />
+        <Route path="/aboutUs" element={<AboutPage /> } />
       </Routes>
     </Router>
   );
