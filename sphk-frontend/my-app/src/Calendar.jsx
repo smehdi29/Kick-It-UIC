@@ -8,9 +8,8 @@ function Calendar({ upcomingGames, recentGames }) {
     const lastDay = endOfMonth(today);
     const totalDays = eachDayOfInterval({ start: firstDay, end: lastDay });
 
-    const getDayClassName = (day) => {
+    const getDayClassName = (day) => { 
         const dayPassed = isBefore(day, today) && !isSameDay(day, today);
-
         const sameDay = isSameDay(day, today);
         const upcomingGame = upcomingGames.some(game => isSameDay(new Date(game.date), day));
         const recentGame = recentGames.some(game => isSameDay(new Date(game.date), day));
@@ -27,10 +26,10 @@ function Calendar({ upcomingGames, recentGames }) {
         const recentGame = recentGames.find(game => isSameDay(new Date(game.date), day));
 
         if(upcomingGame){
-            return upcomingGame.name;
+            return upcomingGame.title;
         }
         if(recentGame){
-            return recentGame.name;
+            return recentGame.title;
         }
         return '';
     }

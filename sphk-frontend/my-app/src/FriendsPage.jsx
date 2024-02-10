@@ -1,25 +1,67 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './FriendsPage.css';
 import { useParams } from 'react-router-dom';
 import PageHeader from './PageHeader';
+import {listUsers} from './UserService.js';
+import one from './1.png';
+import two from './2.png';
+import three from './3.png';
+import four from './4.png';
+import five from './5.png';
+import six from './6.png';
+import seven from './7.png';
 
-const friends = [
-    {firstName: 'Dimi', lastName: 'Gjorgievski', profilePic: 1, skillLevel: 1, Age: 18},
-    {firstName: 'Frank', lastName: 'Sinatra', profilePic: 2, skillLevel: 0, Age: 18, },
-];
+
 
 function FriendsPage(){
+    const getProfilePicture = (user) => {
+        switch(user.pfp){
+            case 1:
+                return one;
+            case 2:
+                return two;
+            case 3:
+                return three;
+            case 4:
+                return four;
+            case 5:
+                return five;
+            case 6:
+                return six;
+            default:
+                return seven;
+        }
+    }
+    const[users, setUsers] = useState([])
+    useEffect(() =>{
+        listUsers().then((response) =>{
+            setUsers(response.data);
+        }).catch(error => {
+            console.error("Could not get users");
+        })
+    }, [])
     return(
-        <div className="friendaPage">
+        <div className="friendsPage">
             <PageHeader />
-            <div className="friendsContainer">
-                {friends.map((friend, index)=> (
-                    <div className="friendItem" key={index}>
-                        <img src={friend.profilePic} alt={friend.name} className="friendPic"/>
-                        <p className="friendName">{friend.name}</p>
-                    </div>
-                ))}
-            </div>
+            <h1 className='header1'>Add friends!</h1>
+            <table className='usersTable'>
+                <thead>
+                    <th> </th>
+                    <th> Profile Picture </th>
+                    <th> Name </th>
+                </thead>
+                <tbody>
+                    {
+                        users.map(user=>
+                            <tr key={user.id}>
+                                <td><button className="addFriend">+Add Friend</button></td>
+                                <td><img src={getProfilePicture(user)} className="imgFriendPics" /></td>
+                                <td>{user.firstname} {user.lastname}</td>
+                            </tr>
+                            )
+                    }
+                </tbody>
+            </table>
         </div>
     );
 }
