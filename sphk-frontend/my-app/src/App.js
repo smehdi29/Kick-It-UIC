@@ -7,8 +7,10 @@ import JoinGamePage from './JoinGamePage';
 import GamePage from './GamePage';
 import FriendsPage from './FriendsPage';
 import Login from './Login';
+import AboutPage from './AboutPage';
 import SignUp from './SignUp';
 import { listGames } from './GameService.js';
+import CreateSesh from './CreateSesh';
 
 function App() {
   const today = new Date();
@@ -27,7 +29,6 @@ function App() {
     return games.filter(game => isBefore(game.date, today));
   }
 
-
   const upcomingGames = createUpComingGames(); 
   // [{sport: 'Basketball', time: '9pm', date: '02-11-24', teamSize: '4', name: 'ezdubs', location: "SES 250"}, 
   //   {sport: 'Basketball', time: '9pm', date: '02-14-24', teamSize: '4', name: 'ezdubs2.0', location: "ARC 250"},
@@ -36,6 +37,7 @@ function App() {
   const recentGames = createRecentGames();
   // [{sport: 'Soccer', time: '10pm', date: '02-05-24', teamSize: '9', name: 'homies', location: "SES 250"}, {sport: 'Soccer', time: '10pm', date: '02-02-24', teamSize: '9', name: 'homies0.5', location: "SES 250"}];
   const users = [{profilePicture: '1', firstName: 'syed', lastName: 'shaban', age: '9', skillLevel: 'false'}];
+
   return (
     <Router>
       <Routes>
@@ -50,6 +52,8 @@ function App() {
         <Route path="/join-game" element={<JoinGamePage upcomingGames={upcomingGames} />} />
         <Route path="/game/:gameName" element={<GamePage upcomingGames={upcomingGames} recentGames={recentGames} users={users}/>} />
         <Route path="/friends" element={<FriendsPage /> } />
+        <Route path="/createSesh" element={<CreateSesh users={users} />} />
+        <Route path="/aboutUs" element={<AboutPage /> } />
       </Routes>
     </Router>
   );
