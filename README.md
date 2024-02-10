@@ -1,5 +1,7 @@
 # KickIt: Where UIC Sports Come Alive
 
+### Imagine a social health app meticulously crafted for the average academic student at UIC. We present to you KickIt. Beyond the surface of personalized profiles and game updates, KickIt is a strategic blend of technology, design finesse, and a deep understanding of the collegiate experience. Within 24 hours, we have persevered through tech intricacies and creative collisions, all channeled into an app that seamlessly integrates fitness into the everyday UIC routine. KickIt isn't just an app; it's a curated connection to improve the school's community. We invite you to envision the transformative impact of KickIt—download today and witness the convergence of sports, community, and well-being on UIC's campus.
+
 Welcome to KickIt, your ultimate sports companion tailored exclusively for UIC students. At KickIt, we're all about promoting holistic well-being through the joy of sports and active living. Consider us your go-to for a balanced and fun campus life.
 
 # What we’re about:
