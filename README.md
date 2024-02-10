@@ -21,3 +21,6 @@ From establishing a functional database to crafting UI-pleasing scenes, KickIt s
 We invite you to be a part of the KickIt community, where sports, community, and well-being converge. Download KickIt today and embark on a journey toward a healthier and more connected campus experience.
 
 Team Members: Syed Shaban, Syed Mehdi, Sadiq Fox, Oscar Franco
+
+#Instructions: Open Backend project in Intelij and click run on the main application. In VScode, open front end "my-app" and run npm start in the terminal.
+
