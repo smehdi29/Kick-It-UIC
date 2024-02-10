@@ -1,0 +1,58 @@
+.gamePage {
+    font-family: 'Comfortaa', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    background-image: url('backgroundspace.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: black;
+}
+
+.locImg {
+    width: 500px;
+    height: 350px;
+}
+
+.gamePage h2{
+    color: white;
+}
+
+.gamePageContainer {
+    background-color: white;
+    border-radius: 20px;
+    min-height: 70%;
+    width: 50%;
+    display: flex;
+    flex-flow: wrap row;
+    flex-direction: column;
+    max-width: 800px;
+    margin: auto;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+    padding: 10px 20px; /* top and bottom, left and right*/
+}
+
+.gameDetails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    gap: 10px;
+}
+
+.gameDetails p {
+    font-size: 1.1rem;
+    margin: 30px 0;
+}
+
+.gameDetails strong {
+    color: #333;
+}
