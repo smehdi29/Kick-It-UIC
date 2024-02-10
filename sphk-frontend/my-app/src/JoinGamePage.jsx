@@ -14,6 +14,10 @@ function JoinGamePage({ upcomingGames }) {
         navigate(path);
     }
 
+    const goCreate = () => {
+        navigate('/createSesh');
+    }
+
 
     let filteredGames = upcomingGames;
     if(selectedSport !== 'All'){
@@ -61,7 +65,7 @@ function JoinGamePage({ upcomingGames }) {
                 </table>
             </div>
             <br></br>
-            <button className="newGame">+Add Game</button>
+            <button className="newGame" onClick={goCreate}>+Add Game</button>
         </div>
     );
 }

@@ -12,7 +12,7 @@ function MainPage({upcomingGames, recentGames, sport}) {
     const selectedRecent = recentGames.filter(game => game.sport === sport || sport === 'All');
 
     const goToGame = (game) => {
-        let path = '/game/' + game.name;
+        let path = '/game/' + game.title;
         navigate(path);
     }
     
@@ -46,7 +46,7 @@ function MainPage({upcomingGames, recentGames, sport}) {
                                 <tbody>
                                     {selectedUpcoming.map((game, index) => (
                                         <tr key={index} onClick={() => goToGame(game)} className="upcomingClicker">
-                                            <td>{game.name}</td>
+                                            <td>{game.title}</td>
                                             <td>{game.sport}</td>
                                             <td>{game.date}</td>
                                             <td>{game.time}</td>
@@ -73,7 +73,7 @@ function MainPage({upcomingGames, recentGames, sport}) {
                                 <tbody>
                                     {selectedRecent.map((game, index) => (
                                         <tr key={index}>
-                                            <td>{game.name}</td>
+                                            <td>{game.title}</td>
                                             <td>{game.sport}</td>
                                             <td>{game.date}</td>
                                             <td>{game.time}</td>
