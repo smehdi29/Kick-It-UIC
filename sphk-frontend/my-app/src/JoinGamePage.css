@@ -1,0 +1,91 @@
+.joinGamePage {
+    font-family: 'Comfortaa', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    background-image: url('backgroundspace.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: white;
+}
+
+
+.sportFilterDropdown {
+    padding: 10px 15px;
+    background-color: green;
+    color:white;
+    border:none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+}
+
+.sportFilterDropdown:hover {
+    background-color: lightgreen;
+    color: black;
+}
+
+.joinGamePage h2 {
+    margin-bottom: 1rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+}
+
+ .newGame {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+} 
+
+.newGame:hover {
+    background-color: lightgreen;
+    color: black;
+}
+
+.gameNames:hover {
+    cursor: pointer;
+}
+.gamesTableContainer {
+    padding: 20px;
+    border-radius: 20px;
+    padding-top: 40px;
+    background-color: white;
+    width: 80%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    min-width: 700px;
+    color: black;
+}
+
+.gamesTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.gamesTable th, .gamesTable td {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.gamesTable button {
+    background-color: lightgreen;
+    color: black;
+    border: 0.5px solid black;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 1rem;
+}

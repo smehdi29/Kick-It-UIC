@@ -1,0 +1,51 @@
+.calendarGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    justify-content: center;
+    width: fit-content;
+    margin: auto;
+    color: black;
+}
+
+.gameName {
+    font-size: 90%;
+}
+.dayTile {
+    padding: 10px;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.dayNumber {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 0.8em;
+}
+
+.pastDay {
+    background-color: rgb(127, 213, 241);
+}
+
+.currentDay {
+    background-color: rgb(125, 208, 125);
+}
+
+.upcomingGameDay {
+    background-color: violet;
+}
+
+.recentGameDay {
+    background-color: orange;
+}
+
+.defaultDay {
+    background-color: #fff;
+}
