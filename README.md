@@ -1,2 +1,2 @@
 # SparkHacks2024
-Add later
+Kick - It UIC
