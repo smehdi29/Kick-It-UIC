@@ -1,0 +1,93 @@
+.fullHeader {
+    display: flex;
+    gap: 10px;
+}
+
+.header {
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 3%;
+    width: 90%;
+    z-index: 1000;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    color: white;
+}
+
+
+
+.navbarHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.logo {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.nav-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: gray;
+    color: white;
+    font-weight: 10;
+}
+
+.navbar {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    margin-top: 20px;
+    
+}
+
+.navbar>button {
+    width: 15vh;
+    height: 4vh;
+}
+
+nav > button {
+    margin-left: 100px;
+    padding: 5px 10px;
+    border: none;
+    background-color: darkslategray;
+    color: white;
+}
+
+
+.nav-button:hover {
+    background-color: #ccc;
+}
+
+
+.nav-button:hover, nav>button:hover {
+    background-color: darkgray;
+    color: black;
+}
+
+.leftSideNavBar:hover {
+    cursor: pointer;
+}
+
+.leftSideNavBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

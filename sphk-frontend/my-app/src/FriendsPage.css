@@ -1,0 +1,25 @@
+.friendsContainer {
+    display: flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.friendItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+}
+
+.friendPic{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover; /* makes surethe image covers the area without distortion*/
+}
+
+.friendName{
+    margin-top: 10px;
+}

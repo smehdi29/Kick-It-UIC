@@ -1,0 +1,146 @@
+.mainPageContent {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    background-image: url('backgroundspace.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #fff;
+}
+
+#tsparticles {
+    height: 100vh;
+    width: 100vw;
+  }
+
+h2{
+    text-align: center;
+}
+
+@media(max-width: 720px) {
+    .tableContainer {
+        width: 90%;
+    }
+}
+.upcomingClicker:hover {
+    cursor: pointer;
+}
+
+button {
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 90%;
+}
+
+.mainPageContent, button {
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.mainContent {
+    padding: 30px;
+    margin-top: 60px;
+}
+
+.table{
+    background-color: white;
+    color: black;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    
+}
+
+table th, table td {
+    padding: 12px 24px;
+}
+.header {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.navbarHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.layoutContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    align-items: center;
+
+}
+
+.gamesContainer {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.calendarContainer {
+    flex: 1;
+}
+
+.tableContainer {
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 105%;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.flexContainer {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-around;
+}
+
+.joinGameButton, .addGameButton {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.joinGameButton:hover, .addGameButton:hover {
+    background-color: lightgreen;
+    color: black;
+}
+
+.calendarHeader {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
+.addGameButton {
+    position: absolute;
+    right: 15%;
+}
+
+
+.joinGameButton {
+    width: 10em;
+    height: 5em;
+}
+
